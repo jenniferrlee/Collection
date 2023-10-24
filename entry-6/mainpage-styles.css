@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14pt;
+    background-color: aliceblue;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+}
+
+.tag-cloud {
+    display: inline-block;
+    color: black;
+    padding: 6px 10px;
+    border-radius: 25px;
+    border-color: black;
+    margin-top: 8px;
+  }
+
+.logo {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 1rem;
+}
+
+.img {
+    max-width: 300pt; /* Limit the maximum width to 100% of the parent container */
+    height: auto;    /* Allow the height to adjust proportionally */
+}
+
+.image-box {
+    margin: 1rem;
+    position: relative;
+    width: 200px;
+    
+}
+
+.image-description {
+    position: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 81, 0);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.image-box:hover .image-description {
+    opacity: 1;
+}
+
+
+/* grid styles */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  /* This will ensure 5 items horizontally at all times */
+    gap: 16px;
+    width: 100%;
+}
+
+/* Mobile layout: 3 items per row */
+@media (max-width: 768px) {  /* Adjust 768px based on your definition of mobile size */
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-container:hover .grid-image {
+    opacity: 0.7;
+}
+
+.image-container:hover .text-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* nav padding */
+
+nav {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+/* image sizing */
+
+.instagram-link img {
+    height: 30px;
+    width: auto; /* maintain aspect ratio */
+}
+
+/* tag-cloud */
+
+.tag-cloud {
+    background-color: rgba(200, 200, 200, 0.5);  /* Example gray color with full opacity */
+    transition: background-color 0.3s ease;
+    min-width: 40px;
+}
+
+.tag-cloud:hover {
+    background-color: rgba(200, 200, 200, 0.2);  /* Same gray color, but with 30% opacity */
+
+}
+
+.tag-cloud:active {
+    transform: scale(0.95); /* Slightly reduce the size to give feedback of a press */
+}
+
+/* info styles */
+
+/* Base styles for the .info section */
+.info {
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1rem;
+    border-radius: 0px;
+    margin-left: auto;
+    position: relative; /* Set to relative so the dropdown is positioned based on this */
+    display: inline-block; /* Make the width adjust to content */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the .info section */
+.info:hover {
+    background-color: #f5f5f5;
+}
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    right: 0; /* Changed from left: 0 to right-align the dropdown with .info */
+    z-index: 1; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    background-color: #ffffff;
+    text-align: right; /* Right-align the text */
+    width: auto; /* Let the dropdown adjust to its content's width */
+    padding: 10px 0;
+    box-sizing: border-box; /* Add this */
+}
+
+/* Style each link in the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 0 15px;  /* Adjusted padding; removed vertical padding */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    line-height: 1.5;
+    white-space: nowrap;  /* Prevent wrapping of text inside dropdown items */
+    width: 100%;
+    box-sizing: border-box; /* Add this */
+    text-overflow: ellipsis; /* To show an ellipsis when text overflows */
+    max-width: calc(100% - 30px); /* Deducting the total padding from left and right */
+
+}
+
+/* Hover effect for links */
+.dropdown-content:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown when .info is hovered */
+.info:hover .dropdown-content {
+    display: block;
+}
+
+/* modal styles */
+
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    z-index: 1000; /* Put on top of everything */
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    }
+
+    .modal-image {
+        max-height: 80vh;
+        display: block;  /* Added to ensure the title and description match the width of the image */
+    }
+
+    .modal-title, .modal-description {
+        width: 80%;  /* Matches the width of modal-image */
+        text-align: center;
+        color: white;
+        font-size: 16px; /* Adjust font-size to your liking */
+        padding: 5px 0;
+    }
+
+
+    .modal-description {
+        bottom: 30px; /* Separate the title and the description a bit */
+    }
+
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+  
+  .modal-close:hover {
+    background-color: #555;
+  }
+  
+/* model content wrapper */
+
+.modal-content-wrapper {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
