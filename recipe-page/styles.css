@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'pp_neue_montrealregular';
+    src: url('ppneuemontreal-regular-webfont.woff2') format('woff2'),
+         url('ppneuemontreal-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    margin: 20;
+    padding: 0;
+    font-family: 'pp_neue_montreallight', sans-serif;
+    font-size: 14pt;
+    background-color: #614340;
+    cursor: url('cursor-img-tester.png'), auto;
+    color: rgb(255, 241, 230);
+}
