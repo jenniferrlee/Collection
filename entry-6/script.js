@@ -7,6 +7,11 @@ const objectsArray = [
     { source: 'https://www.datocms-assets.com/108996/1697556078-letter-c.jpg', letter: 'c' },
     { source: 'https://www.datocms-assets.com/108996/1697556219-letter-v.jpg', letter: 'v' },
     { source: 'https://www.datocms-assets.com/108996/1697556192-letter-s.jpg', letter: 's' },
+    { source: 'https://www.datocms-assets.com/108996/1697556211-letter-u.jpg', letter: 'u' },
+    { source: 'https://www.datocms-assets.com/108996/1697556085-letter-c2.jpg', letter: 'c' },
+    { source: 'https://www.datocms-assets.com/108996/1698741795-letter-i.jpeg', letter: 'i' },
+    { source: 'https://www.datocms-assets.com/108996/1698741815-letter-m.jpeg', letter: 'm' },
+
 ].sort((a, b) => a.letter.localeCompare(b.letter)); // Sorting the array initially
 
 const mainElement = document.querySelector('main');
