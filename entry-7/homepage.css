@@ -65,6 +65,7 @@ body {
     color: #ff5733;
 }
 
+
 .contact-button {
     position: fixed;
     bottom: 20px;
@@ -79,24 +80,12 @@ body {
 @media screen and (max-width: 600px) {
     .intro {
         font-size: 24px;
-    }
-
-    .hoverable .dropdown {
-        position: static;
-        display: none;
-    }
-
-    .hoverable:hover .dropdown {
-        display: block;
-    }
-
-    .dropdown a {
-        padding: 8px;
+        white-space: normal;
     }
 
     .contact-button {
-        font-size: 24px;
-        bottom: 10px;
-        right: 10px;
+    font-size: 18px;
+    bottom: 10px;
+    right: 10px;
     }
 }
