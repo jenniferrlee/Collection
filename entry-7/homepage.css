@@ -11,7 +11,7 @@ body {
     text-align: left;
     margin: 10px 0;
     font-size: 48px;
-    white-space: nowrap;
+    white-space: normal; /* Allow text to wrap */
 }
 
 .hoverable {
@@ -65,7 +65,6 @@ body {
     color: #ff5733;
 }
 
-
 .contact-button {
     position: fixed;
     bottom: 20px;
@@ -77,38 +76,27 @@ body {
     outline: 1px solid #246EFF;
 }
 
-.dot-container {
-    position: relative;
-    font-size: 16px;
-}
+@media screen and (max-width: 600px) {
+    .intro {
+        font-size: 24px;
+    }
 
-.dot {
-    display: inline;
-    position: absolute;
-    top: calc(var(--y) * 1%);
-    left: calc(var(--x) * 1%);
-    z-index: 1;
-    cursor: pointer;
-}
+    .hoverable .dropdown {
+        position: static;
+        display: none;
+    }
 
-.images {
-    position: relative;
-    font-size: 16px;
-    pointer-events: none;
-}
+    .hoverable:hover .dropdown {
+        display: block;
+    }
 
-.dot-image {
-    position: absolute;
-    top: calc(var(--y) * 1% - 10px); /* Adjust as needed */
-    left: calc(var(--x) * 1% - 10px); /* Adjust as needed */
-    width: 20px;
-    height: 20px;
-    background-color: #ff5733; /* Adjust as needed */
-    border-radius: 50%;
-    visibility: hidden;
-    pointer-events: none;
-}
+    .dropdown a {
+        padding: 8px;
+    }
 
-.dot:hover + .images .dot-image {
-    visibility: visible;
+    .contact-button {
+        font-size: 24px;
+        bottom: 10px;
+        right: 10px;
+    }
 }
