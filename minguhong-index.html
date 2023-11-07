@@ -1,0 +1,952 @@
+<!--
+ ________ .-------.      ___    _ .-./`) ,---------.  ________   ___    _   .---.             .-------. .-------.        .-''-.     .-'''-.     .-''-.  ,---.   .--.,---------.    ____   ,---------. .-./`)     ,-----.    ,---.   .--. 
+|        ||  _ _   \   .'   |  | |\ .-.')\          \|        |.'   |  | |  | ,_|             \  _(`)_ \|  _ _   \     .'_ _   \   / _     \  .'_ _   \ |    \  |  |\          \ .'  __ `.\          \\ .-.')  .'  .-,  '.  |    \  |  | 
+|   .----'| ( ' )  |   |   .'  | |/ `-' \ `--.  ,---'|   .----'|   .'  | |,-./  )             | (_ o._)|| ( ' )  |    / ( ` )   ' (`' )/`--' / ( ` )   '|  ,  \ |  | `--.  ,---'/   '  \  \`--.  ,---'/ `-' \ / ,-.|  \ _ \ |  ,  \ |  | 
+|  _|____ |(_ o _) /   .'  '_  | | `-'`"`    |   \   |  _|____ .'  '_  | |\  '_ '`)           |  (_,_) /|(_ o _) /   . (_ o _)  |(_ o _).   . (_ o _)  ||  |\_ \|  |    |   \   |___|  /  |   |   \    `-'`"`;  \  '_ /  | :|  |\_ \|  | 
+|_( )_   || (_,_).' __ '   ( \.-.| .---.     :_ _:   |_( )_   |'   ( \.-.| > (_)  )           |   '-.-' | (_,_).' __ |  (_,_)___| (_,_). '. |  (_,_)___||  _( )_\  |    :_ _:      _.-`   |   :_ _:    .---. |  _`,/ \ _/  ||  _( )_\  | 
+(_ o._)__||  |\ \  |  |' (`. _` /| |   |     (_I_)   (_ o._)__|' (`. _` /|(  .  .-'           |   |     |  |\ \  |  |'  \   .---..---.  \  :'  \   .---.| (_ o _)  |    (_I_)   .'   _    |   (_I_)    |   | : (  '\_/ \   ;| (_ o _)  | 
+|(_,_)    |  | \ `'   /| (_ (_) _) |   |    (_(=)_)  |(_,_)    | (_ (_) _) `-'`-'|___         |   |     |  | \ `'   / \  `-'    /\    `-'  | \  `-'    /|  (_,_)\  |   (_(=)_)  |  _( )_  |  (_(=)_)   |   |  \ `"/  \  ) / |  (_,_)\  | 
+|   |     |  |  \    /  \ /  . \ / |   |     (_I_)   |   |      \ /  . \ /  |        \        /   )     |  |  \    /   \       /  \       /   \       / |  |    |  |    (_I_)   \ (_ o _) /   (_I_)    |   |   '. \_/``".'  |  |    |  | 
+'---'     ''-'   `'-'    ``-'`-''  '---'     '---'   '---'       ``-'`-''   `--------`        `---'     ''-'   `'-'     `'-..-'    `-...-'     `'-..-'  '--'    '--'    '---'    '.(_,_).'    '---'    '---'     '-----'    '--'    '--' 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fruitful Presentation</title>
+    <meta name="description" content="Fruitful Presentation at the Fruitful School">
+    <meta name="keywords" content="Fruitful Presentation, Fruitful School, HTML, CSS">
+    <meta itemprop="name" content="Fruitful Presentation">
+    <meta itemprop="description" content="Fruitful Presentation">
+    <meta itemprop="image" content="https://products.minguhongmfg.com/fruitful-presentation/og-image.png">
+    <meta property="og:url" content="https://products.minguhongmfg.com/fruitful-presentation">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fruitful Presentation">
+    <meta property="og:description" content="Fruitful Presentation at the Fruitful School">
+    <meta property="og:image" content="https://products.minguhongmfg.com/fruitful-presentation/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fruitful Presentation">
+    <meta name="twitter:description" content="Fruitful Presentation at the Fruitful School">
+    <meta name="twitter:image" content="https://products.minguhongmfg.com/fruitful-presentation/og-image.png">
+    <style>
+      html,
+      body,
+      p,
+      ol,
+      ul,
+      li,
+      dl,
+      dt,
+      dd,
+      blockquote,
+      figure,
+      fieldset,
+      legend,
+      textarea,
+      pre,
+      iframe,
+      hr,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 100%;
+        font-weight: normal;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        margin: 0;
+      }
+
+      html {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+      }
+
+      img,
+      video {
+        height: auto;
+        max-width: 100%;
+      }
+
+      iframe {
+        border: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      td,
+      th {
+        padding: 0;
+      }
+
+      td:not([align]),
+      th:not([align]) {
+        text-align: left;
+      }
+
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      html {
+        font-size: 16px;
+        text-rendering: optimizeLegibility;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        background-color: yellow;
+      }
+
+      article,
+      aside,
+      figure,
+      footer,
+      header,
+      hgroup,
+      section {
+        display: block;
+      }
+
+      body,
+      button,
+      input,
+      select,
+      textarea {
+        font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      }
+
+      code,
+      pre {
+        -moz-osx-font-smoothing: auto;
+        -webkit-font-smoothing: auto;
+        font-family: monospace;
+      }
+
+      body {
+        position: relative;
+        font-size: 1rem;
+        line-height: 1.25;
+        word-break: keep-all;
+        color: green;
+        cursor: default;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      a:active {
+        color: red;
+      }
+
+      .slide {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+      }
+
+      hr + .slide {
+        color: yellow;
+        background-color: green;
+      }
+
+      .slide:first-child,
+      .slide:target {
+        display: block;
+      }
+
+      .updated {
+        position: absolute;
+        top: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        animation: fade 1s;
+      }
+
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-height: 100%;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 1em;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        -webkit-animation: fade 1s;
+        animation: fade 1s;
+      }
+
+      @media screen and (min-width: 900px) {
+        .content {
+          font-size: 3rem;
+        }
+      }
+
+      @media screen and (min-width: 1800px) {
+        .content {
+          font-size: 4.5rem;
+        }
+      }
+
+      .content a {
+        text-decoration: underline;
+      }
+
+      .content a:w:after {
+        content: attr(href);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: .25em .5em;
+        font-size: 1em;
+        text-align: center;
+        word-break: break-all;
+        color: yellow;
+        background-color: green;
+        border-radius: .125em;
+      }
+
+      hr {
+        display: none;
+      }
+
+      hr + .slide a:hover:after {
+        color: green;
+        background-color: yellow;
+      }
+
+      .content em {
+        font-style: normal;
+      }
+
+      .content em:before,
+      .content em:after {
+        content: "*";
+      }
+
+      .content strong:before,
+      .content strong:after {
+        content: "**";
+      }
+
+      .content abbr:after {
+        content: " (" attr(title) ")";
+      }
+
+      .content code {
+        padding: 0 .125em;
+        font-family: Courier;
+        line-height: 1;
+        color: yellow;
+        background-color: green;
+        border-radius: .125em;
+      }
+
+      .content pre {
+        padding: .25em .5em;
+        overflow-x: auto;
+        font-family: Courier;
+        color: yellow;
+        background-color: green;
+        border-radius: .125em;
+        text-align: left;
+      }
+
+      .content pre code {
+        padding: 0;
+        font-family: inherit;
+        line-height: inherit;
+        color: inherit;
+        background-color: transparent;
+        border-radius: 0;
+      }
+
+      .content [data-tooltip] {
+        text-decoration: underline;
+        -webkit-text-decoration-style: dotted;
+        text-decoration-style: dotted;
+        cursor: help;
+      }
+
+      .content [data-tooltip]:hover:after {
+        content: attr(data-tooltip);
+        position: fixed;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        max-width: calc(100% - 1em);
+        width: 100%;
+        padding: .25em .5em;
+        font-size: 1em;
+        color: yellow;
+        background-color: green;
+        border-radius: .125em;
+      }
+
+      @media screen and (min-width: 900px) {
+        .content [data-tooltip]:hover:after {
+          max-width: 75%;
+        }
+      }
+
+      hr + .slide [data-tooltip]:hover:after {
+        color: green;
+        background-color: yellow;
+      }
+
+      .slide .nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .slide .nav a {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+        flex: 1 1 0;
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .slide .nav a:active {
+        transform: scale(.95);
+      }
+
+      @-webkit-keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body ontouchstart="">
+    <header class="slide" id="1">
+      <h1 class="content">Fruitful Presentation</h1>
+      <time class="updated" datetime="2021-02-19">Last updated on 19th Feb, 2021.</time>
+      <nav class="nav">
+        <a href="#2" title="Next">Next</a>
+      </nav>
+    </header>
+
+    <hr>
+
+    <section class="slide" id="2">
+      <p class="content">Hello? My name is <a href="https://minguhong.com" target="_blank">Min Guhong</a>.<p>
+      <nav class="nav">
+        <a href="#1" title="Previous">Previous</a>
+        <a href="#3" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="3">
+      <p class="content">I’m South Korean, regardless of my will.<p>
+      <nav class="nav">
+        <a href="#2" title="Previous">Previous</a>
+        <a href="#4" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="4">
+      <p class="content"><a href="https://en.wikipedia.org/wiki/Korean_name#In_English" target="_blank">So my surname is “Min”, not “Guhong.”</a> It’s also not my responsibility.<p>
+      <nav class="nav">
+        <a href="#3" title="Previous">Previous</a>
+        <a href="#5" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="5">
+      <p class="content">But you can call me just “Min.” Or “Michael” something. It’s easy to pronounce.<p>
+      <nav class="nav">
+        <a href="#4" title="Previous">Previous</a>
+        <a href="#6" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="6">
+      <p class="content">Thank you for inviting me to <a href="https://fruitful.school" target="_blank">Fruitful School</a> anyway. It’s also where I want to be a student or a teacher.<p>
+      <nav class="nav">
+        <a href="#5" title="Previous">Previous</a>
+        <a href="#7" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="7">
+      <p class="content">A few days ago, my favorite American friends <a href="https://laurelschwulst.com" target="_blank">Laurel</a> and <a href="https://johnprovencher.com" target="_blank">John</a> asked me to reveal my secrets to make websites…<p>
+      <nav class="nav">
+        <a href="#6" title="Previous">Previous</a>
+        <a href="#8" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="8">
+      <p class="content">with a video.<p>
+      <nav class="nav">
+        <a href="#7" title="Previous">Previous</a>
+        <a href="#9" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="9">
+      <p class="content">But I can’t handle a video very well. And the time to render a video is quite boring for me. Benjamin Franklin said, “Remember that time is money.“<p>
+      <nav class="nav">
+        <a href="#8" title="Previous">Previous</a>
+        <a href="#10" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="10">
+      <p class="content">Websites are easier to make and edit than videos. And also I thought it would be better to present about websites through a website.<p>
+      <nav class="nav">
+        <a href="#9" title="Previous">Previous</a>
+        <a href="#11" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="11">
+      <p class="content">It means you have to keep clicking to watch the next content following my strategy, as you’ve done so naturally.<p>
+      <nav class="nav">
+        <a href="#10" title="Previous">Previous</a>
+        <a href="#12" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="12">
+      <p class="content">But I don’t know how many times you have to click from now on. Maybe once or 100 times?<p>
+      <nav class="nav">
+        <a href="#11" title="Previous">Previous</a>
+        <a href="#13" title="Next">Next</a>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section class="slide" id="13">
+      <p class="content">I studied <span data-tooltip="Poetry">literature</span> and <span data-tooltip="Pragmatics">linguistics</span> at <a href="http://cau.ac.kr" target="_blank">Chung-ang University</a>, and <span data-tooltip="Literature and linguistics in a narrow sense.">computer programming</span> at <a href="https://sfpc.io" target="_blank">School for Poetic Computation (SFPC)</a>, and some useful skills such as <span data-tooltip="Literature and linguistics in a narrow sense?">design</span>, <span data-tooltip="Just knotting.">knotting</span>, or <span data-tooltip="Though I’m a total beginner.">ikebana</span> on the web through search engines such as <a href="https://google.com" target="_blank">Google</a>.<p>
+      <nav class="nav">
+        <a href="#12" title="Previous">Previous</a>
+        <a href="#14" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="14">
+      <p class="content">But it’s not enough to introduce me just by my educational background. I’m still learning new things as a student at the school called “Google.” Aren’t you, too?<p>
+      <nav class="nav">
+        <a href="#13" title="Previous">Previous</a>
+        <a href="#15" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="15">
+      <p class="content">I work as <span data-tooltip="But I like to be called just an editor if possible. Because design and programming involve editing.">an editor, a designer, and a programmer</span> at Workroom, <a href="http://workroom.kr" target="_blank">a graphic design studio</a> and <a href="http://workroompress.kr" target="_blank">a publisher</a>.<p>
+      <nav class="nav">
+        <a href="#14" title="Previous">Previous</a>
+        <a href="#16" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="16">
+      <p class="content">As a writer and a translator, I wrote “<a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=227134045" target="_blank">New Order</a>,” a book on coding, and translated “<a href="https://www.goodreads.com/book/show/1092748.Forget_All_the_Rules_You_Ever_Learned_About_Graphic_Design" target="_blank">Forget all the rules  you ever learned about graphic design. Including the ones in this book.</a>” by <a href="https://www.bobgilletc.com" target="_blank">Bob Gill</a> <a href="https://www.sulki-min.com/wp/forget-all-the-rules-you-ever-learned-about-graphic-design" target="_blank">into Korean</a>. Now I’m translating “<a href="https://a-new-program-for-graphic-design.org" target="_blank">A *New* Program for Graphic Design</a>” by <a href="http://www.davidreinfurt.com" target="_blank">David Reinfurt</a>.<p>
+      <nav class="nav">
+        <a href="#15" title="Previous">Previous</a>
+        <a href="#17" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="17">
+      <p class="content">As a teacher, I teach coding as a practical and conceptual writing in my small school “<a href="http://neworder.xyz" target="_blank">New Order</a>.” It’s also a sibling of Fruitful School, one of pedagogical models of the future.<p>
+      <nav class="nav">
+        <a href="#16" title="Previous">Previous</a>
+        <a href="#18" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="18">
+      <p class="content">As a CEO, I run a one-man company “<a href="https://minguhongmfg.com" target="_blank">Min Guhong Manufacturing</a>.” (It can be abbreviated as “Min Guhong Mfg.”) The company is parasitic on Workroom. Workroom is its current <span data-tooltip="“In biology and medicine, a host is a larger organism that harbours a smaller organism; whether a parasitic, a mutualistic, or a commensalist guest (symbiont).” —Wikipedia">host</span>. Its first host was <a href="https://ag.co.kr" target="_blank">Ahn Graphics</a> founded by <a href="http://ssahn.com" target="_blank">Ahn Sang-soo</a>, a South Korean leading typographer. Laurel is also the <span data-tooltip="A spiritual leader.">godmother</span> of the company.<p>
+      <nav class="nav">
+        <a href="#17" title="Previous">Previous</a>
+        <a href="#19" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="19">
+      <p class="content">The company’s main goal is to promote itself in various ways. The results manufactured in the process are called “<span data-tooltip="“An item that serves as a solution to a specific consumer problem.” —Wikipedia">products</span>.”<p>
+      <nav class="nav">
+        <a href="#18" title="Previous">Previous</a>
+        <a href="#20" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="20">
+      <p class="content">The products are <a href="http://archive.minguhongmfg.com/about-the-company/about-the-company-en.pdf" download>writings</a>, <a href="https://minguhongmfg.itch.io/welcome" target="_blank">games</a>, <a href="https://youtu.be/O1PrZvWD9BU" target="_blank">videos</a>, <a href="http://bem.kr/product/search.html?banner_action=&keyword=민구홍+매뉴팩처링" target="_blank">clothings</a>, <a href="http://products.minguhongmfg.com/times-blank" target="_blank">fonts</a>, <a href="https://en.wikipedia.org/wiki/Ricotta" target="_blank">foods</a>, <a href="https://www.sulki-min.com/wp/rainbow-sherbet" target="_blank">books</a>, <a href="https://www.artbava.com/exhibit/민구홍-매뉴팩처링-레인보-셔벗-min-guhong-manufacturing-rainbow-sherbet" target="_blank">exhibitions</a>, and so on. Including this you’re watching and clicking, websites are one of them.<p>
+      <nav class="nav">
+        <a href="#19" title="Previous">Previous</a>
+        <a href="#21" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="21">
+      <p class="content">Recently the company sent <a href="https://products.minguhongmfg.com/dear-messrs-young-hae-chang-heavy-industries" target="_blank">a letter of respect</a> to <a href="https://yhchang.com" target="_blank">Young-hae Chang Heavy Industries</a>. The title is “Dear Messrs. Young-hae Chang Heavy Industries.” It’s Korean, but even if you’re not Korean, you can fully feel the meaning. And the company is waiting for a reply.<p>
+      <nav class="nav">
+        <a href="#20" title="Previous">Previous</a>
+        <a href="#22" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="22">
+      <p class="content">You can also see the other websites the company manufactured <a href="https://left.gallery/min-guhong-mfg" target="_blank">here</a>, <a href="http://www.taste-house.com/program/토크-민구홍-『새로운-질서』-출간-기념-토크" target="_blank">here</a>, or <a href="https://twitter.com/workroompress/status/1340991721832738816?s=20" target="_blank">here</a>. But the amount doesn’t matter. It’s the process of introducing the company anyway.<p>
+      <nav class="nav">
+        <a href="#21" title="Previous">Previous</a>
+        <a href="#23" title="Next">Next</a>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section class="slide" id="23">
+      <p class="content">Do you have any favorite websites?<p>
+      <nav class="nav">
+        <a href="#22" title="Previous">Previous</a>
+        <a href="#24" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="24">
+      <p class="content"><a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">This</a> is my favorite.<p>
+      <nav class="nav">
+        <a href="#23" title="Previous">Previous</a>
+        <a href="#25" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="25">
+      <p class="content">Yes, the first website on the web. Only purely white, black, blue, purple, and red… It was made by <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank">Sir Tim Berners-Lee</a> maybe?<p>
+      <nav class="nav">
+        <a href="#24" title="Previous">Previous</a>
+        <a href="#26" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="26">
+      <p class="content">This website shows what I’m after.<p>
+      <nav class="nav">
+        <a href="#25" title="Previous">Previous</a>
+        <a href="#27" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="27">
+      <p class="content">The content in the website is graceful and practical…<p>
+      <nav class="nav">
+        <a href="#26" title="Previous">Previous</a>
+        <a href="#28" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="28">
+      <p class="content">and the technologies used are old but still work perfectly. For over 30 years! Therefore, the website is also the oldest one.<p>
+      <nav class="nav">
+        <a href="#27" title="Previous">Previous</a>
+        <a href="#29" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="29">
+      <p class="content">There are many technologies for making websites. But we don’t know everything, and we don’t even have to learn them. We have a lot of things to do, such as having to live.<p>
+      <nav class="nav">
+        <a href="#28" title="Previous">Previous</a>
+        <a href="#30" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="30">
+      <p class="content"><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> at the bottom of the <a href="https://en.wikipedia.org/wiki/Eye_of_Providence#/media/File:Dollarnote_siegel_hq.jpg" target="_blank">pyramid</a> of web technologies can be sufficient. <a href="http://www.csszengarden.com" target="_blank">There are many things we can do with only them</a>.<p>
+      <nav class="nav">
+        <a href="#29" title="Previous">Previous</a>
+        <a href="#31" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="31">
+      <p class="content">Of course, you may need other technologies. Sometimes I also use JavaScript, <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>, Python, and so on, as needed.<p>
+      <nav class="nav">
+        <a href="#30" title="Previous">Previous</a>
+        <a href="#32" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="32">
+      <p class="content">“Write less, do more.” This is a motto of <a href="https://jquery.com" target="_blank">jQuery</a> by <a href="https://johnresig.com" target="_blank">John Resig</a>. I reflect it, whenever I use technologies.<p>
+      <nav class="nav">
+        <a href="#31" title="Previous">Previous</a>
+        <a href="#33" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="33">
+      <p class="content"><a href="https://forum.freecodecamp.org/t/why-does-everyone-hate-on-jquery/271301/6" target="_blank">Some people don’t like jQuery</a>. <a href="https://www.quora.com/Is-jQuery-already-outdated" target="_blank">Others say it’s outdated</a>. Sometimes I agree, but I like it. It’s old but easy to use.<p>
+      <nav class="nav">
+        <a href="#32" title="Previous">Previous</a>
+        <a href="#34" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="34">
+      <p class="content">Technology is important. But the <em>more</em> important thing is how to use it. And the <strong>most</strong> important thing is whether you have something to say to yourself or someone. In short, content.<p>
+      <nav class="nav">
+        <a href="#33" title="Previous">Previous</a>
+        <a href="#35" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="35">
+      <p class="content">So, for example, <a href="https://news.ycombinator.com/item?id=7152068" target="_blank">the argument over jQuery and vanilla JavaScript</a> doesn’t really matter to me. I can just use both or either as needed.<p>
+      <nav class="nav">
+        <a href="#34" title="Previous">Previous</a>
+        <a href="#36" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="36">
+      <p class="content">Think about websites you often visit. Why do you visit them? Because of fancy design or amazing effects?<p>
+      <nav class="nav">
+        <a href="#35" title="Previous">Previous</a>
+        <a href="#37" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="37">
+      <p class="content">If the content is beautiful, the means of containing it will have a certain aura, like the first website or <a href="http://minumsa.minumsa.com/book/1664" target="_blank">a book I love to read</a>. I believe that.<p>
+      <nav class="nav">
+        <a href="#36" title="Previous">Previous</a>
+        <a href="#38" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="38">
+      <p class="content">This thought remains the same since I first made <span data-tooltip="Unfortunately, it disappeared when Yahoo! GeoCities closed down. Now it’s only in my dream.">a website for my friend I loved when I was an 11-year-old kid</span>.<p>
+      <nav class="nav">
+        <a href="#37" title="Previous">Previous</a>
+        <a href="#39" title="Next">Next</a>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section class="slide" id="39">
+      <p class="content">Do you have any favorite HTML tags?<p>
+      <nav class="nav">
+        <a href="#38" title="Previous">Previous</a>
+        <a href="#40" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="40">
+      <p class="content"><code>&lt;a&gt;</code> is my favorite. As you know, it makes generally <a href="https://www.crazyegg.com/blog/why-hyperlinks-are-blue" target="_blank">blue underlined hyperlinks</a>  to the content. It makes all the hierarchies horizontal. It distinguishes between websites and books.<p>
+      <nav class="nav">
+        <a href="#39" title="Previous">Previous</a>
+        <a href="#41" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="41">
+      <p class="content"><code>&lt;a&gt;</code> means “anchor.” So when I click it on a website, I anchor there and move to another website, web page, or somewhere.<p>
+      <nav class="nav">
+        <a href="#40" title="Previous">Previous</a>
+        <a href="#42" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="42">
+      <p class="content">Around HTML, such as <code>&lt;a&gt;</code>, all tags wrapped around content make (block-level or inline-level) elements. And all elements are <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">semantic</a> boxes. Some boxes are placed next to others. <a href="https://www.amazon.com/Give-Gift-Frustration-Practical-Christmas/dp/B0779KYSLQ" target="_blank">Some boxes contain some boxes</a>. Sometimes it looks like <a href="https://en.wikipedia.org/wiki/Kowloon_Walled_City#/media/File:KWC_-_1989_Aerial.jpg" target="_blank">Kowloon Walled City</a>.<p>
+      <nav class="nav">
+        <a href="#41" title="Previous">Previous</a>
+        <a href="#43" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="43">
+      <div class="content">
+        <pre><code>&lt;p&gt;This is a sentence. This is another one. Two sentences are the components of a paragraph.&lt;/p&gt;</code></pre>
+      </div>
+      <nav class="nav">
+        <a href="#42" title="Previous">Previous</a>
+        <a href="#44" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="44">
+      <p class="content"><code>&lt;p&gt;</code> defines the content as a paragraph.</p>
+      <nav class="nav">
+        <a href="#43" title="Previous">Previous</a>
+        <a href="#45" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="45">
+      <div class="content">
+        <pre><code>&lt;ol&gt;&lt;li&gt;This is a sentence.&lt;/li&gt;&lt;li&gt;This is another one.&lt;/li&gt;&lt;li&gt;Two sentences are the components of a paragraph.&lt;/li&gt;&lt;li&gt;But the structure of this is a list, not a paragraph.&lt;/li&gt;&lt;/ol&gt;</code></pre>
+      </div>
+      <nav class="nav">
+        <a href="#44" title="Previous">Previous</a>
+        <a href="#46" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="46">
+      <p class="content"><code>&lt;li&gt;</code> defines the content as an ordered list. And it can be more complex. It means more context is added to the content.</p>
+      <nav class="nav">
+        <a href="#45" title="Previous">Previous</a>
+        <a href="#47" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="47">
+      <div class="content">
+        <pre><code>&lt;ul&gt;&lt;li&gt;&lt;a&gt;&lt;figure&gt;&lt;ol&gt;&lt;li&gt;This is a sentence.&lt;/li&gt;&lt;li&gt;This is another one.&lt;/li&gt;&lt;/ol&gt;&lt;figcaption&gt;Two sentences are the components of a paragraph. But it’s a figure as an ordered list in another unordered list.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code></pre>
+      </div>
+      <nav class="nav">
+        <a href="#46" title="Previous">Previous</a>
+        <a href="#48" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="48">
+      <p class="content">What CSS does is to give the boxes visual or invisible styles. And the other computer languages such as JavaScript, PHP, or Python add functionalities to the boxes. It’s like this if I talk roughly.<p>
+      <nav class="nav">
+        <a href="#47" title="Previous">Previous</a>
+        <a href="#49" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="49">
+      <p class="content">In short, making a website means practically controlling the boxes with combining technologies. And you should decide the content in the boxes.<p>
+      <nav class="nav">
+        <a href="#48" title="Previous">Previous</a>
+        <a href="#50" title="Next">Next</a>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section class="slide" id="50">
+      <p class="content">Then where does the content come from? Sometimes it’s given from someone such as clients. But the easiest way is to find it within yourself.<p>
+      <nav class="nav">
+        <a href="#49" title="Previous">Previous</a>
+        <a href="#51" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="51">
+      <p class="content">Think about your interests. What you like, or what you don’t like… What you’ve felt in your life. What made you who you’re now. What makes you different from others. Only about you.<p>
+      <nav class="nav">
+        <a href="#50" title="Previous">Previous</a>
+        <a href="#52" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="52">
+      <p class="content">If you found something within youself, start to make the file <code>index.html</code>. And keep developing the file with confidence. Sometimes you might fail. But the website is “<a href="https://en.wikipedia.org/wiki/Perpetual_beta" target="_blank">the perpetual beta</a>” until you lose confidence or get bored developing it. This website also will be changed little by little.<p>
+      <nav class="nav">
+        <a href="#51" title="Previous">Previous</a>
+        <a href="#53" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="53">
+      <p class="content">And making something even if it’s not a website must make you happy first in any way. Otherwise, it’s of no use.<p>
+      <nav class="nav">
+        <a href="#52" title="Previous">Previous</a>
+        <a href="#54" title="Next">Next</a>
+      </xnav>
+    </section>
+    <section class="slide" id="54">
+      <p class="content">Don’t be too misled by social media. Not everyone gets a lot of likes, so the likes of social media are likely to make you look shabby. Focus on yourself, not on other people’s reactions.<p>
+      <nav class="nav">
+        <a href="#53" title="Previous">Previous</a>
+        <a href="#55" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="55">
+      <p class="content">Don’t try to look cool on purpose. If you’re cool, you look cool naturally. It’s a little sentimental, but making your own website is about loving yourself.<p>
+      <nav class="nav">
+        <a href="#54" title="Previous">Previous</a>
+        <a href="#56" title="Next">Next</a>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section class="slide" id="56">
+      <p class="content">One more thing. Coding is writing (and editing).<p>
+      <nav class="nav">
+        <a href="#55" title="Previous">Previous</a>
+        <a href="#57" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="57">
+      <p class="content">Code is for writing. I’m also writing now… Slowly and carefully like <a href="https://en.wikipedia.org/wiki/E._B._White" target="_blank">E. B. White</a> or <a href="https://en.wikipedia.org/wiki/Stewart_Brand" target="_blank">Stewart Brand</a>.<p>
+      <nav class="nav">
+        <a href="#56" title="Previous">Previous</a>
+        <a href="#58" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="58">
+      <p class="content">In coding, designing is also writing. The letters I typed become spaces, forms, colors, or animations. Designing as writing. This is not a metaphorical expression. It has nothing to do with <a href="https://en.wikipedia.org/wiki/Concrete_poetry" target="_blank">concrete poetry</a>. It’s as clear as <a href="https://en.wikipedia.org/wiki/Nouveau_roman" target="_blank">Nouveau roman</a>.<p>
+      <nav class="nav">
+        <a href="#57" title="Previous">Previous</a>
+        <a href="#59" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="59">
+      <p class="content">Coding is primarily communication with computers. Computers are not as generous with typos as humans are. So when you’re coding, you have to be a writer, above all, an (authorial) editor. Otherwise, you will meet hideous bugs.<p>
+      <nav class="nav">
+        <a href="#58" title="Previous">Previous</a>
+        <a href="#60" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="60">
+      <p class="content">In coding, naming is also important. There are many things to be named. Titles, usernames, metadata names, domain names, class names, id names, function names, field names, database table names… <a href="https://en.wikipedia.org/wiki/Crime_and_Punishment#Characters" target="_blank">Like the names of the characters in Dostoevsky’s novels</a>.<p>
+      <nav class="nav">
+        <a href="#59" title="Previous">Previous</a>
+        <a href="#61" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="61">
+      <p class="content">Naming is about how I define a thing.<p>
+      <nav class="nav">
+        <a href="#60" title="Previous">Previous</a>
+        <a href="#62" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="62">
+      <p class="content">If I name something “something,” something becomes “something.”<p>
+      <nav class="nav">
+        <a href="#61" title="Previous">Previous</a>
+        <a href="#63" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="63">
+      <p class="content">If I name something “article,” something becomes an “article.” If I name something “list,” something becomes a  “list.” If I name something “cherry,” something becomes a “cherry.”<p>
+      <nav class="nav">
+        <a href="#62" title="Previous">Previous</a>
+        <a href="#64" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="64">
+      <p class="content">A good name effectively implies the content. The results are <em><span data-tooltip="Yes, already.">already</span></em> determined by how I name it.<p>
+      <nav class="nav">
+        <a href="#63" title="Previous">Previous</a>
+        <a href="#65" title="Next">Next</a>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section class="slide" id="65">
+      <p class="content">Since the invention of the web, it has been beautifully vast and messy. Assuming the web is an orchard, a website is a fruit.<p>
+      <nav class="nav">
+        <a href="#64" title="Previous">Previous</a>
+        <a href="#66" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="66">
+      <p class="content"><a href="https://thecreativeindependent.com/people/min-guhong" target="_blank">It can be a watermelon, a melon, a peach, a fig, a cherry</a>, or a tomato.<p>
+      <nav class="nav">
+        <a href="#65" title="Previous">Previous</a>
+        <a href="#67" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="67">
+      <p class="content">“<a href="https://fruitful.school/blog/2019-12-19.html" target="_blank">Is a tomato really a fruit?</a>” About two years ago, when Laurel tasted “<a href="https://products.minguhongmfg.com/mysterious-fruit" target="_blank">Mysterious Fruit</a>,” she once asked me this.<p>
+      <nav class="nav">
+        <a href="#66" title="Previous">Previous</a>
+        <a href="#68" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="68">
+      <p class="content">I answered, “Good question. Some people say tomato is a fruit, others say it’s not. Some people say both. Whatever the truth is, when I believe that a tomato is a fruit, it becomes a fruit for me.”<p>
+      <nav class="nav">
+        <a href="#67" title="Previous">Previous</a>
+        <a href="#69" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="69">
+      <p class="content">Can the web be fruitful? Can the web make us happy? The answer is the same. I believe that the important thing is to believe. And it’s up to us to decide what to believe or not.<p>
+      <nav class="nav">
+        <a href="#68" title="Previous">Previous</a>
+        <a href="#70" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="70">
+      <p class="content">Thank you for watching and clicking “Fruitful Presentation.” If this presentation was fruitful for you, I think it’s all thanks to the energy of the title. <a href="https://twitter.com/share?url=https://products.minguhongmfg.com/fruitful-presentation&text=Fruitful Presentation at the Fruitful School(@FruitfulSchool)" target="_blank">You can share the fruitfulness with your family or friends</a>.<p>
+      <nav class="nav">
+        <a href="#69" title="Previous">Previous</a>
+        <a href="#71" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="71">
+      <p class="content">For this website, I only used simple but semantic HTML and CSS. I wanted to prove that I can do many things with not bad content and basic and fundamental technologies.<p>
+      <nav class="nav">
+        <a href="#70" title="Previous">Previous</a>
+        <a href="#72" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="72">
+      <p class="content">You can download this website <a href="index.html" download>here</a>, and check out the code. But it may not be as great as you think. That’s how secrets are supposed to be.<p>
+      <nav class="nav">
+        <a href="#71" title="Previous">Previous</a>
+        <a href="#73" title="Next">Next</a>
+      </nav>
+    </section>
+    <section class="slide" id="73">
+      <p class="content">And <a href="mailto:minguhong@gmail.com">feel free to get in touch with me</a> if you have any questions, or an unbearable healthy desire to tell me that you love me or Min Guhong Mfg. You can also try to read ”<a href="https://minguhongmfg.com/faq" target="_blank">FAQ</a>” on the Min Guhong Mfg.’s official website.<p>
+      <nav class="nav">.
+        <a href="#72" title="Previous">Previous</a>
+        <a href="#74" title="Next">Next</a>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section class="slide" id="74">
+      <p class="content">Well, have a fruitful day!<p>
+      <nav class="nav">
+        <a href="#73" title="Previous">Previous</a>
+        <a href="#75" title="Next">Next</a>
+      </nav>
+    </section>
+    <footer class="slide" id="75">
+      <p class="content">Oh, <a href="https://youtu.be/kAI3nfI16qo" target="_blank">for your information…</a><p>
+      <nav class="nav">
+        <a href="#74" title="Previous">Previous</a>
+      </nav>
+    </footer>
+  </body>
+</html>
