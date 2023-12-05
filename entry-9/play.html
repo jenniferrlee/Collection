@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play page</title>
+</head>
+<style>
+    body {
+        margin-left: 1.8rem;
+    }
+    
+    nav {
+    font-family: Helvetica;
+    color: black;
+    font-size: 16pt;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    }
+
+    .list-1, .list-2 {
+        font-family: helvetica;
+        font-size: 24pt;
+        color: black;
+        width: fit-content;
+    }
+
+    .list-1 a, .list-2 a, .list-3 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .list-1 a:hover, .list-2 a:hover, .list-3 a:hover {
+        background-color: yellow;
+        font-family: monospace;
+    }
+
+    .hide {
+        display: none;
+        font-family: helvetica;
+        font-size: 14pt;
+        color: black; 
+    }
+
+    .logo {
+        max-width: 70px;
+    }
+
+    .logo:hover {
+    scale: 120%;
+    }
+
+    .list-1:hover + .hide {
+        display: block;
+    }
+    
+    img {
+        max-width: 50vw;
+        padding: 1rem;
+
+    }
+</style>
+<body>
+    <nav>
+        <section class="logo"><a href="homepage.html"><img src=home.svg></a></section>  
+    </nav>
+    <div class="list-1"><a href="random-img.html">1. Click and drag</a></div>
+        <div class="hide">Click and drag the letters to create a word!
+            <br>
+                <img src="imgs/screenshot-1.png">
+    </div>
+    <div class="list-2"><a href="another game.html">2. In progress...</a></div>
+        <div class="hide"></div>
+
+    <div class="list-2"><a href="">3. In progress...</a></div>
+    <div class="hide"></div>
+</body>
+</html>

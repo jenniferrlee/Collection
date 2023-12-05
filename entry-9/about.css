@@ -1,0 +1,55 @@
+.aboutTitle {
+    margin-top: 2%;
+    margin-left: 10%;
+    font-size: 48px;
+    font-family: Helvetica;
+
+}
+
+.aboutText {
+    font-size: 18px;
+    font-family: Helvetica;
+    padding-top: 2rem;
+    margin-left: 10%;
+    margin-right: 20%;
+    line-height: 140%;
+
+}
+
+nav {
+    font-family: Helvetica;
+    color: black;
+    font-size: 16pt;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 50px;
+}
+
+.logo:hover {
+    scale: 120%;
+}
+
+a {    
+    text-decoration: underline;    
+    color: black;
+}
+
+.aboutText a:hover {
+    background-color: yellow;
+    text-decoration: none;    
+    font-family: monospace;
+}
+
+.hide {
+    display: none;
+}
+
+.hidden-letters:hover + .hide{
+    display:block;
+    position:fixed;
+    bottom: 5%;
+}
