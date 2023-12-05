@@ -17,6 +17,16 @@ nav {
     text-decoration: none;
 }
 
+.about-container {
+    flex-wrap: wrap;
+
+}
+
+.about:hover, .about-active {
+    background-color: #000F;
+}
+
+
 .logo a {
     text-decoration: none;
     color: #246EFF; /* Set the desired text color */
@@ -269,7 +279,7 @@ main {
     .modal-title, .modal-description {
         width: 80%;  /* Matches the width of modal-image */
         text-align: center;
-        color: white;
+        color: black;
         font-size: 16px; /* Adjust font-size to your liking */
         padding: 5px 0;
     }
@@ -301,8 +311,27 @@ main {
 
 .modal-content-wrapper {
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: fit-content;
+
+    background-color: white;
 }
+
+.aboutText {
+    /* z-index: 9999; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:none;
+}
+
+.show {
+    display: block;
+}
+
+.imageText{
+  
+}
+

@@ -109,10 +109,10 @@ main {
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 155px); /* Set the width for each column */
-    gap: 255px; /* Set the gap between columns */
-    row-gap: 100px;
-    width: calc(4 * 155px + 3 * 255px); /* Calculate the total width including gaps */
+    grid-template-columns: repeat(4, 15%); 
+    gap: 10%;
+    row-gap: 10%;
+    width: 100%; /* Calculate the total width including gaps */
     margin: 50px auto; /* Center the grid */
 }
 
@@ -120,7 +120,7 @@ main {
 /* Mobile layout: 3 items per row */
 @media (max-width: 768px) {
     .image-grid {
-        grid-template-columns: repeat(3fr, 1);
+        grid-template-columns: repeat(2, 40%);
         gap: 50px;
         row-gap: 50px;
     }
@@ -325,3 +325,11 @@ main {
   
 }
 
+@media screen and (max-width: 500px) {
+    .modal-content-wrapper{
+        flex-direction: column;
+    }
+    
+}
+    
+}

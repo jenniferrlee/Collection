@@ -45,6 +45,10 @@ html, body {
     cursor: grab;
 }
 
+.random-image:active{
+    cursor: grab;
+
+}
 /* Media query for mobile devices */
 @media (max-width: 767px) {
     .random-image {

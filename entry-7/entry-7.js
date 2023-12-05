@@ -1,23 +1,23 @@
 // Array of objects with 'source' and 'letter' properties
 const objectsArray = [
     { source: 'https://www.datocms-assets.com/108996/1697556257-letter-z.jpg', letter: 'z' , description: 'I found this with my friend Freddy.'},
-    { source: 'https://www.datocms-assets.com/108996/1697556226-letter-w.jpg', letter: 'w' },
-    { source: 'https://www.datocms-assets.com/108996/1697556038-letter-a.jpg', letter: 'a' },
-    { source: 'https://www.datocms-assets.com/108996/1697556100-letter-e.jpg', letter: 'e' },
-    { source: 'https://www.datocms-assets.com/108996/1697556078-letter-c.jpg', letter: 'c' },
-    { source: 'https://www.datocms-assets.com/108996/1697556219-letter-v.jpg', letter: 'v' },
-    { source: 'https://www.datocms-assets.com/108996/1697556192-letter-s.jpg', letter: 's' },
-    { source: 'https://www.datocms-assets.com/108996/1697556211-letter-u.jpg', letter: 'u' },
-    { source: 'https://www.datocms-assets.com/108996/1697556085-letter-c2.jpg', letter: 'c' },
-    { source: 'https://www.datocms-assets.com/108996/1698741795-letter-i.jpeg', letter: 'i' },
-    { source: 'https://www.datocms-assets.com/108996/1698741815-letter-m.jpeg', letter: 'm' },
-    { source: 'https://www.datocms-assets.com/108996/1698741864-letter-q.jpeg', letter: 'q'},
-    { source: 'https://www.datocms-assets.com/108996/1697556246-letter-x.jpg', letter: 'x'},
-    { source: 'https://www.datocms-assets.com/108996/1697556059-letter-a2.jpg', letter: 'a'},
-    { source: 'https://www.datocms-assets.com/108996/1699947191-o.jpeg', letter: 'o'},
-    { source: 'https://www.datocms-assets.com/108996/1699947200-u.jpeg', letter: 'u'},
-    { source: 'https://www.datocms-assets.com/108996/1699947210-x.jpeg', letter: 'x'},
-    { source: 'https://www.datocms-assets.com/108996/1699947224-z.jpeg', letter: 'z'}
+    { source: 'https://www.datocms-assets.com/108996/1697556226-letter-w.jpg', letter: 'w' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556038-letter-a.jpg', letter: 'a' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556100-letter-e.jpg', letter: 'e' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556078-letter-c.jpg', letter: 'c' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556219-letter-v.jpg', letter: 'v' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556192-letter-s.jpg', letter: 's' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556211-letter-u.jpg', letter: 'u' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556085-letter-c2.jpg', letter: 'c', description: 'I found this with my friend Freddy.' },
+    { source: 'https://www.datocms-assets.com/108996/1698741795-letter-i.jpeg', letter: 'i', description: 'I found this with my friend Freddy.' },
+    { source: 'https://www.datocms-assets.com/108996/1698741815-letter-m.jpeg', letter: 'm' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1698741864-letter-q.jpeg', letter: 'q', description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556246-letter-x.jpg', letter: 'x', description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1697556059-letter-a2.jpg', letter: 'a', description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1699947191-o.jpeg', letter: 'o', description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1699947200-u.jpeg', letter: 'u', description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1699947210-x.jpeg', letter: 'x' , description: 'I found this with my friend Freddy.'},
+    { source: 'https://www.datocms-assets.com/108996/1699947224-z.jpeg', letter: 'z', description: 'I found this with my friend Freddy.'}
 
 ].sort((a, b) => a.letter.localeCompare(b.letter)); // Sorting the array initially
 
@@ -54,18 +54,16 @@ function populateImageGrid(imagesArray) {
         imgContainer.appendChild(imgWrapper);
 
         // Description
-        if (obj.description) {
             const textDescription = document.createElement('div');
             textDescription.className = 'text-description';
             textDescription.textContent = `Description: ${obj.description}`;
             imgWrapper.appendChild(textDescription);
-        }
 
         gridDiv.appendChild(imgContainer);
 
         // Attach event listener to each image
         imgElement.addEventListener('click', function() {
-            openModal(imgElement.src, `${obj.letter.toUpperCase()}`, obj.description ? `Description: ${obj.description}` : null);
+            openModal(imgElement.src, `${obj.letter.toUpperCase()}`, `Description: ${obj.description}`);
         });
     });
 }
@@ -114,12 +112,15 @@ function openModal(imageSrc, title, description) {
     modalImage.src = imageSrc;
     modalTitle.textContent = title;
 
-    if (description) {
-        modalDescription.textContent = description;
-        modalDescription.style.display = 'block'; // Show it if it was hidden
-    } else {
-        modalDescription.style.display = 'none'; // Hide it if there's no description
-    }
+    modalDescription.textContent = description; 
+
+
+    // if (description) {
+    //     modalDescription.textContent = description;
+    //     modalDescription.style.display = 'block'; // Show it if it was hidden
+    // } else {
+    //     modalDescription.style.display = 'none'; // Hide it if there's no description
+    // }
 
     modal.style.display = 'block';
 }
@@ -129,7 +130,7 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
-document.querySelector('.modal-close').addEventListener('click', closeModal);
+document.querySelector('.modal-content').addEventListener('click', closeModal);
 
 window.onclick = function(event) {
     const modal = document.getElementById('myModal');
@@ -146,3 +147,17 @@ function myFunction() {
       x.style.display = "none";
     }
   }
+
+  function appearText() {
+    let aboutText = document.querySelector(".aboutText");
+    let aboutContainer = document.querySelector(".about-container");
+
+    // Toggle the visibility of aboutText
+    aboutText.style.display = (aboutText.style.display === "none" || aboutText.style.display === "") ? "block" : "none";
+
+    // Toggle the background color class for the ABOUT section
+    aboutContainer.classList.toggle("about-active", aboutText.style.display === "block");
+}
+
+let aboutContainer = document.querySelector(".about-container");
+aboutContainer.addEventListener("click", appearText);
