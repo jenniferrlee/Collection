@@ -4,10 +4,10 @@ body {
 
 }
 
-.square a {
-    text-decoration: none;
-    color: black;
+img {
+    width: 100%;
 }
+
 
 .pageTitle {
     font-size: 7.5vw;
@@ -16,6 +16,7 @@ body {
     text-align: center;
     position: relative;
 }
+
 
 .grid {
     display: grid;
@@ -62,10 +63,6 @@ body {
 
 }
 
-.square:hover:nth-child(6) {
-    cursor: not-allowed;
-    
-}
 
 /* Demo Specific Style */
 .grid {

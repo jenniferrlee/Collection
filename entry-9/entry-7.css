@@ -26,7 +26,15 @@ nav {
     top: 3%;
     font-size: 34pt;
     color:rgb(159, 159, 159);
+    cursor: pointer;
+}
 
+.close:hover {
+    color:#ffffff;
+}
+
+.close:active {
+    color:#333;
 }
 
 .logo {
@@ -75,7 +83,6 @@ main {
     transform: translateY(0);
 }
 
-/* Styles for the description text */
 .text-description {
     position: absolute;
     top: 100%;
@@ -100,14 +107,6 @@ main {
     position: center;
 }
 
-/* Mobile layout */
-@media (max-width: 768px) {
-    .image-grid {
-        grid-template-columns: repeat(2, 40%);
-        gap: 50px;
-        row-gap: 50px;
-    }
-}
 
 .image-container {
     position: relative;
@@ -163,11 +162,9 @@ main {
     transform: scale(0.95);
 }
 
-/* Button styling */
 button.disabled {
     pointer-events: none;
     opacity: 0.5;
-    /* Add any additional styling for disabled buttons */
 }
 
 /* Modal styles */
@@ -234,12 +231,12 @@ button.disabled {
     text-align: left;
     color: black;
     padding: 20px;
-    width: 25vw; /* Set a fixed height for consistent white space */
+    width: 25vw;
     overflow-y: auto; /* Add scroll if description exceeds the fixed height */
 }
 
 .modal-title {
-    font-size: 56pt;
+    font-size: 80pt;
     padding: 20px;
     text-align: left;
     margin-top: 5px;
@@ -248,8 +245,18 @@ button.disabled {
 
 }
 
+/* popup modal for mobile must be added!!!!! */
 
-@media screen and (max-width:500px){
+/* Mobile layout */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 40%);
+        gap: 50px;
+        row-gap: 50px;
+    }
+}
+
+@media screen and (max-width:768px){
     .modal {
         display: none;
         position: fixed;
@@ -271,7 +278,7 @@ button.disabled {
     }
     
     .modal-image {
-        max-height: 80vh;
+        height: 80%;
         display: block;
     }
     
@@ -290,5 +297,25 @@ button.disabled {
         border: none;
         border-radius: 50%;
         font-size: 20px;
+    }
+
+    .modal-description {
+        font-size: 10pt;
+        text-align: left;
+        color: black;
+        margin-top: 30px;
+        padding: 20px;
+        width: 25vw;
+        overflow-y: auto; /* Add scroll if description exceeds the fixed height */
+    }
+    
+    .modal-title {
+        font-size: 36pt;
+        padding: 20px;
+        text-align: left;
+        margin-top: 5px;
+        position: fixed;
+        top: 10px;
+    
     }
 }

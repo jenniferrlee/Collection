@@ -19,7 +19,12 @@ const objectsArray = [
     { source: 'https://www.datocms-assets.com/108996/1699947191-o.jpeg', letter: 'o', location: 'Nearby 66 West 12th'},
     { source: 'https://www.datocms-assets.com/108996/1699947200-u.jpeg', letter: 'u', location: 'UC toilet'},
     { source: 'https://www.datocms-assets.com/108996/1699947210-x.jpeg', letter: 'x' , location: 'Lobby of Johnson/Kaplan 66 West 12th'},
-    { source: 'https://www.datocms-assets.com/108996/1699947224-z.jpeg', letter: 'z', location: 'Johnson/Kaplan 66 West 12th room #615'}
+    { source: 'https://www.datocms-assets.com/108996/1699947224-z.jpeg', letter: 'z', location: 'Johnson/Kaplan 66 West 12th room #615'},
+    { source: 'https://www.datocms-assets.com/108996/1701788724-d2.jpg', letter: 'd', location: '14th St 8th Ave Station'},
+    { source: 'https://www.datocms-assets.com/108996/1701788768-z3.jpg', letter: 'z', location: 'Unknown'},
+    { source: 'https://www.datocms-assets.com/108996/1701788734-k.jpg', letter: 'k', location: '40.73555° N, 73.99654° W'},
+    { source: 'https://www.datocms-assets.com/108996/1701788758-n2.jpg', letter: 'n', location: '40.73509° N, 73.99548° W'},
+    { source: 'https://www.datocms-assets.com/108996/1701789216-r.jpg', letter: 'r', location: '40.73714° N, 74.00054° W'}
 
 ].sort((a, b) => a.letter.localeCompare(b.letter)); // Sorting the array initially
 
@@ -126,15 +131,15 @@ buttons.forEach(button => {
 document.getElementById('all').click(); // Trigger click on the 'All' button
 
 
-// Attach event listener to close the modal when clicking on modal content
-document.getElementById('myModal').addEventListener('click', function(e) {
-    if (e.target.classList.contains('modal-content')) {
-        closeModal();
-    }
-});
-
+// Attach a single event listener to stop propagation for modal content clicks
+const modalContent = document.querySelector('.modal-content');
+modalContent.onclick = function(e) {
+    e.stopPropagation();
+}
 
 function openModal(imageSrc, title, description) {
+    let currentIndex = objectsArray.findIndex(obj => obj.source === imageSrc);
+
     const modal = document.getElementById('myModal');
     const modalImage = document.getElementById('modalImage');
     const modalTitle = document.getElementById('modalTitle');
@@ -142,19 +147,28 @@ function openModal(imageSrc, title, description) {
 
     modalImage.src = imageSrc;
     modalTitle.textContent = title;
-
-    modalDescription.textContent = description; 
-
-
-    // if (description) {
-    //     modalDescription.textContent = description;
-    //     modalDescription.style.display = 'block'; // Show it if it was hidden
-    // } else {
-    //     modalDescription.style.display = 'none'; // Hide it if there's no description
-    // }
+    modalDescription.textContent = description;
 
     modal.style.display = 'block';
+
+    document.addEventListener('keydown', function (e) {
+        // Check if the modal is open and the key pressed is an arrow key
+        if (modal.style.display === 'block' && ['ArrowLeft', 'ArrowRight'].includes(e.key)) {
+            if (e.key === 'ArrowLeft') {
+                // Move to the previous image
+                currentIndex = (currentIndex - 1 + objectsArray.length) % objectsArray.length;
+            } else if (e.key === 'ArrowRight') {
+                // Move to the next image
+                currentIndex = (currentIndex + 1) % objectsArray.length;
+            }
+
+            // Update the modal content with the new image
+            const nextImage = objectsArray[currentIndex];
+            openModal(nextImage.source, `${nextImage.letter.toUpperCase()}`, `📍 ${nextImage.location}`);
+        }
+    });
 }
+
 
 function closeModal() {
     const modal = document.getElementById('myModal');

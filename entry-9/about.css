@@ -1,18 +1,18 @@
 .aboutTitle {
     margin-top: 2%;
     margin-left: 10%;
-    font-size: 48px;
+    font-size: 46px;
     font-family: Helvetica;
 
 }
 
 .aboutText {
-    font-size: 18px;
+    font-size: 46px;
     font-family: Helvetica;
     padding-top: 2rem;
     margin-left: 10%;
     margin-right: 20%;
-    line-height: 140%;
+    line-height: 120%;
 
 }
 
