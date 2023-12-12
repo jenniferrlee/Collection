@@ -1,0 +1,340 @@
+body {
+  font-family: Helvetica;
+  background-color: #ffffff;
+  color: black;
+  margin-top: 20px;
+}
+
+nav {
+  font-family: Helvetica;
+  color: black;
+  font-size: 16pt;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.close {
+  position: fixed;
+  right: 3%;
+  top: 3%;
+  font-size: 34pt;
+  color: rgb(159, 159, 159);
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ffffff;
+}
+
+.close:active {
+  color: #333;
+}
+
+.logo {
+  max-width: 50px;
+}
+
+.logo:hover {
+  scale: 120%;
+}
+
+.buttons {
+  margin: 20px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 1.5rem;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  color: white;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.image-box {
+  margin: 1rem;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.image-container:hover .text-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-description {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.image-container:hover .text-description {
+  opacity: 1;
+}
+
+/* Grid styles */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  gap: 6.5%;
+  row-gap: 5.5%;
+  width: 100%;
+  margin: 20px auto;
+  position: center;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+.img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .grid-image {
+  opacity: 0.7;
+}
+
+.image-container:hover .text-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tag cloud styles */
+.tag-cloud {
+  transition: background-color 0.3s ease;
+  min-width: 40px;
+  display: inline-block;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 25px;
+  border-color: rgb(159, 159, 159);
+  box-shadow: #333;
+  margin-top: 8px;
+  fill: white;
+}
+
+.tag-cloud:hover,
+.tag-cloud:active {
+  background-color: rgba(255, 255, 66, 1);
+}
+
+.tag-cloud:active {
+  transform: scale(0.95);
+}
+
+button.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+.modal-image {
+  width: 50%;
+  display: block;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.modal-close:hover {
+  background-color: #555;
+}
+
+.modal-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: fit-content;
+  background-color: white;
+  border-radius: 14px;
+  width: 50%;
+  margin: auto;
+}
+
+.imageText {
+  width: 100%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-container {
+    transition: background-color 0.s ease-in-out;
+  }
+  
+  .about-active {
+    background-color: black;
+    color: white;
+  }
+  
+
+/* Modal description styling */
+.modal-description {
+  font-size: 13pt;
+  padding-bottom: 10%;
+  /* width: 90%; */
+  /* text-align: left;
+  color: black;
+  padding: 20px; */
+  /* width: 25vw; */
+  /* overflow-y: auto; Add scroll if description exceeds the fixed height */
+}
+
+.modal-title {
+  font-size: 80pt;
+  padding-top: 5%;
+  /* padding: 20px; */
+  /* text-align: left; */
+  /* margin-top: 5px; */
+  /* position: fixed; */
+  /* top: 10%; */
+}
+
+/* popup modal for mobile must be added!!!!! */
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 40%);
+    gap: 50px;
+    row-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 20%; */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  }
+
+  .modal-content {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    height: 100%;
+  }
+
+  .modal-content-wrapper {
+    justify-content: space-between;
+    display: flex;
+    width: 80%;
+  }
+
+  .modal-image {
+    display: block;
+  }
+
+  .modal-description {
+    bottom: 30px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+
+  .modal-description {
+    font-size: 10pt;
+
+    /* text-align: left;
+    color: black;
+    margin-top: 30px;
+    padding: 20px;
+    width: 25vw;
+    overflow-y: auto; Add scroll if description exceeds the fixed height */
+  }
+
+  .modal-title {
+    font-size: 36pt;
+
+    /* padding-bottom: 50%; */
+    /* padding: 20px;
+    text-align: left;
+    margin-top: 5px;
+    position: fixed;
+    top: 10px; */
+  }
+}
