@@ -63,7 +63,7 @@ const objectsArray = [
     location: "40 Bond St",
   },
   {
-    source: "opt-imgs/i.JPG",
+    source: "opt-imgs/I.JPG",
     letter: "i",
     location: "535 LaGuardia Place",
   },

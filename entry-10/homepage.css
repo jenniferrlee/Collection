@@ -76,13 +76,13 @@ a {
 }
 
 
-@media screen and (max-width:500px){
+@media screen and (max-width:768px){
     .grid {
         display: grid;
         justify-content: center;
         align-content: center;
         grid-gap: 0; /* Remove the gap */
-        grid-template-columns: repeat(2,150px); /* Set the width to 325px */
-        grid-template-rows: repeat(3, 150px); /* Set the height to 325px */
+        grid-template-columns: repeat(3,150px); /* Set the width to 325px */
+        grid-template-rows: repeat(2, 150px); /* Set the height to 325px */
     }
 }
