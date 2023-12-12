@@ -1,7 +1,8 @@
 body {
     font-family: Helvetica, sans-serif;
     text-align: center;
-
+    background-image: url("opt-imgs/background.JPG");
+    background-size: 100vw;
 }
 
 img {
@@ -16,6 +17,7 @@ img {
     text-align: center;
     position: relative;
     text-decoration: none;
+    text-shadow: 0 0 1em yellow, 0 0 0.4em yellow, 1px 1px 2px yellow;
 }
 
 a {
